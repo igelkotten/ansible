@@ -150,11 +150,11 @@ EXAMPLES = """
 
 - dellos6_config:
     lines:
-      - 10 permit ip 1.1.1.1 any log
-      - 20 permit ip 2.2.2.2 any log
-      - 30 permit ip 3.3.3.3 any log
-      - 40 permit ip 4.4.4.4 any log
-      - 50 permit ip  5.5.5.5 any log
+      - 10 permit ip 1.1.1.1 255.255.255.0 any lo
+      - 20 permit ip 2.2.2.2 255.255.255.0 any log
+      - 30 permit ip 3.3.3.3 255.255.255.0 any log
+      - 40 permit ip 4.4.4.4 255.255.255.0 any log
+      - 50 permit ip  5.5.5.5 255.255.255.0 any log
     parents: ['ip access-list test']
     before: ['no ip access-list test']
     match: exact
@@ -162,10 +162,10 @@ EXAMPLES = """
 
 - dellos6_config:
     lines:
-      - 10 permit ip 1.1.1.1 any log
-      - 20 permit ip 2.2.2.2 any log
-      - 30 permit ip 3.3.3.3 any log
-      - 40 permit ip 4.4.4.4 any log
+      - 10 permit ip 1.1.1.1 255.255.255.0 any log
+      - 20 permit ip 2.2.2.2 255.255.255.0 any log
+      - 30 permit ip 3.3.3.3 255.255.255.0 any log
+      - 40 permit ip 4.4.4.4 255.255.255.0 any log
     parents: ['ip access-list test']
     before: ['no ip access-list test']
     replace: block
